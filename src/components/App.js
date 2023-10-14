@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const [inputItem, setInputItem] = useState("");
   const [addItem, setAddItem] = useState([]);
-  const [searchItem, setSearchItem] = useState("");
+  const [searchItem, setSearchItem] = useState('');
 
   function handleChange(e) {
     setInputItem(e.target.value);
@@ -58,7 +58,7 @@ function App() {
           .filter((elem) => {
             return searchItem === ""
               ? elem
-              : elem.toLowerCase().includes(searchItem);
+              : elem.toLowerCase().includes(searchItem.toLowerCase());
           })
           .map((elem, index) => {
             return (
